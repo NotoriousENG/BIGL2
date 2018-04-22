@@ -12,7 +12,7 @@ BigFuckingRock::BigFuckingRock(const char* texturesheet, int x, int y){
 
 void BigFuckingRock::update(){
     
-    ypos=ypos+5;
+    ypos=ypos+1;
     
     srcRect.h = 570;
     srcRect.w = 570;
@@ -21,15 +21,8 @@ void BigFuckingRock::update(){
     
     destRect.x = xpos;
     destRect.y = ypos;
-    destRect.w = srcRect.w/6;
-    destRect.h = srcRect.h/6;
-}
-
-int BigFuckingRock::xval(){
-    return xpos;
-}
-int BigFuckingRock::yval(){
-    return ypos;
+    destRect.w = srcRect.w;
+    destRect.h = srcRect.h;
 }
 
 void BigFuckingRock::render(){

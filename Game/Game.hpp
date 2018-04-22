@@ -26,11 +26,15 @@ public:
     
     bool checkCollision();
     
+    void createBigrock();
+    
 private:
     int cnt;
     bool isRunning;
     bool collision = false;
+    int asteroidspastzero;
     SDL_Window *window;
+    int ticks;
     
     
     

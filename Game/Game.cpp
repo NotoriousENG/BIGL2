@@ -27,7 +27,7 @@ AsteroidObject* enemy5;
 
 AsteroidObject *aster[1000];
 
-BigFuckingRock *rock[20];
+BigFuckingRock *rockstar[20];
 
 Map* map;
 
@@ -42,6 +42,12 @@ Game::Game(){
 Game::~Game(){
     
 }
+
+int bigrock = 0;
+
+int asteroidspastzero=0;
+
+
 
 
 
@@ -74,7 +80,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         isRunning=false;
     }
     
-    player = new PlayerObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",0,550);
+    player = new PlayerObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",400,550);
     
     /*
     enemy = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",100,0);
@@ -91,20 +97,15 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         h=h-50;
     }
     
-    int r = 0;
-    for 
     
-    
-    
-  
+     
     
     
     
     
-
     
     
-
+    
     map = new Map();
     
     //newPlayer.addComponent<PositionComponent>();
@@ -112,6 +113,11 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 }
 
 void Game::handleEvents(){
+    
+    
+    
+    
+    
     
     SDL_Event event;
     SDL_PollEvent(&event);
@@ -139,6 +145,17 @@ void Game::handleEvents(){
 
 void Game::update(){
     
+    
+    ticks = SDL_GetTicks();
+    std::cout<<ticks<<std::endl;
+    
+    
+    if((ticks > 20000)&&()){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+    }
+    
     player->update();
     
     /*enemy->update();
@@ -153,16 +170,9 @@ void Game::update(){
     for (int t = 0; t<1000; t++){
         aster[t]->update();
     }
+    if(rockstar[bigrock]!=NULL){rockstar[bigrock]->update();}
     
     
-    //std::cout<<newPlayer.getComponent<PositionComponent>().x()<<","<<newPlayer.getComponent<PositionComponent>().y()<<std::endl;
-    
-    
-   
-    
-    
-    
-    //counter++;
 }
 
 
@@ -184,6 +194,10 @@ void Game::render(){
     for (int t = 0; t<1000; t++){
         aster[t]->render();
     }
+    if(rockstar[bigrock]!=NULL){rockstar[bigrock]->render();}
+    
+    //rockstar[bigrock]->render();
+    
     
    
   
@@ -200,6 +214,8 @@ void Game::clean(){
     std::cout<<"Game Cleaned..."<<std::endl;
 }
 
+
+
 bool Game::checkCollision(){
     int x = player->xval();
     for (int y = 0; y<1000; y++){
@@ -209,6 +225,14 @@ bool Game::checkCollision(){
             std::cout<<"fuck you loser"<<std::endl;
             collision = true;
         }
+        
     }
+    
+    
+    
+    
+    
     return collision;
 }
+
+

@@ -32,11 +32,14 @@ int main(int argc, const char * argv[]) {
         frameStart = SDL_GetTicks();
         
         
+        
+        
         bool alive = false;
         game->handleEvents();
         game->update();
         game->render();
         alive = game->checkCollision();
+        //game->createBigrock();
         
         
         
