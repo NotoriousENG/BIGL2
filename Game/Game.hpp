@@ -25,13 +25,15 @@ public:
     bool running(){return isRunning;}
     
     bool checkCollision();
+    bool checkBigCollision();
     
-    void createBigrock();
+    //void createBigrock();
     
 private:
     int cnt;
     bool isRunning;
     bool collision = false;
+    bool BigCollision = false;
     int asteroidspastzero;
     SDL_Window *window;
     int ticks;

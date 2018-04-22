@@ -6,7 +6,7 @@ Game *game = nullptr;
 int main(int argc, const char * argv[]) {
     
     int lives = 0;
-    std::cout<<"Enter desired # of lives: (enter int value)"<<std::endl;
+    std::cout<<"How many games do you want to play?"<<std::endl;
     std::cin>>lives;
     
     
@@ -46,10 +46,12 @@ int main(int argc, const char * argv[]) {
         
         
         bool alive = false;
+        bool bigalive = false;
         game->handleEvents();
         game->update();
         game->render();
         alive = game->checkCollision();
+        bigalive = game->checkBigCollision();
         //game->createBigrock();
         
         
@@ -60,8 +62,9 @@ int main(int argc, const char * argv[]) {
             SDL_Delay(frameDelay - frameTime);
         }
         
-        if (alive == true){
+        if ((alive == true)||(bigalive == true)){
             lives--;
+            std::cout<<"fuck you loser"<<std::endl;
             break;
         }
         

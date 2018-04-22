@@ -28,6 +28,13 @@ void BigFuckingRock::update(){
     destRect.h = srcRect.h;
 }
 
+int BigFuckingRock::xval(){
+    return xpos;
+}
+int BigFuckingRock::yval(){
+    return ypos;
+}
+
 void BigFuckingRock::render(){
     SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }

@@ -152,35 +152,40 @@ void Game::update(){
     
     
     
-    if((ticks > 10000)&&(val<1)){
+    if((ticks > 20000)&&(val<1)){
     int location = player->xval();
     rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
     }
-    if((ticks > 20000)&&(val<2)){
+    if((ticks > 40000)&&(val<2)){
         int location = player->xval();
         rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
     }
-    if((ticks > 30000)&&(val<3)){
+    if((ticks > 60000)&&(val<3)){
         int location = player->xval();
         rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
     }
-    if((ticks > 40000)&&(val<4)){
+    if((ticks > 70000)&&(val<4)){
         int location = player->xval();
         rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
     }
-    if((ticks > 50000)&&(val<5)){
+    if((ticks > 80000)&&(val<5)){
         int location = player->xval();
         rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
+    }
+    
+    if(ticks>1000000){
+        std::cout<<"Stop playing this game: "<<std::endl;
+        clean();
     }
      
     
@@ -249,17 +254,23 @@ bool Game::checkCollision(){
         int h = aster[y]->yval();
         int g = aster[y]->xval();
         if((h == 550)&&(((g<=(x+40)&&(g>=x)))||((g<=x)&&(g>=(x-40))))){
-            std::cout<<"fuck you loser"<<std::endl;
             collision = true;
         }
         
     }
-    
-    
-    
-    
-    
     return collision;
+}
+
+bool Game::checkBigCollision(){
+    int x = player->xval();
+    for (int y = 0; y<1000; y++){
+        int h = rockstar[bigrock-1]->yval();
+        int g = rockstar[bigrock-1]->xval()+255;
+        if((h==100)&&(((g<=(x+120)&&(g>=x)))||((g<=x)&&(g>=(x-120))))){
+            BigCollision = true;
+        }
+    }
+    return BigCollision;
 }
 
 
