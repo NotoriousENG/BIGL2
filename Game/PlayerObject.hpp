@@ -11,6 +11,8 @@ public:
     void moveLeft();
     void moveRight();
     
+    int xval();
+    
 private:
     int xpos;
     int ypos;

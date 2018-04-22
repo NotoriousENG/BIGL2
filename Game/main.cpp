@@ -5,6 +5,12 @@ Game *game = nullptr;
 
 int main(int argc, const char * argv[]) {
     
+    int lives = 0;
+    std::cout<<"Enter desired # of lives: (enter int value)"<<std::endl;
+    std::cin>>lives;
+    
+    while(lives!=0){
+    
     const int fps = 60;
    
     const int frameDelay = 1000/fps;
@@ -20,16 +26,17 @@ int main(int argc, const char * argv[]) {
     
     
     
+    
     while (game->running()){
         
         frameStart = SDL_GetTicks();
         
         
-        
+        bool alive = false;
         game->handleEvents();
         game->update();
         game->render();
-        
+        alive = game->checkCollision();
         
         
         
@@ -39,8 +46,14 @@ int main(int argc, const char * argv[]) {
             SDL_Delay(frameDelay - frameTime);
         }
         
+        if (alive == true){
+            lives--;
+            break;
+        }
+        
     }
-    game->clean();
+        game->clean();
+    }
     
     
     return 0;

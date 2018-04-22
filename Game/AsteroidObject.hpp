@@ -12,6 +12,7 @@ public:
     void update();
     void render();
     int xval();
+    int yval();
     
     //void moveLeft();
     //void moveRight();

@@ -24,6 +24,10 @@ void PlayerObject::render(){
     SDL_RenderCopy(Game::renderer, objTexture, &srcRect, &destRect);
 }
 
+int PlayerObject::xval(){
+    return xpos;
+}
+
 void PlayerObject::moveLeft()
 {
     if(xpos<=20){

@@ -13,7 +13,7 @@ AsteroidObject::AsteroidObject(const char* texturesheet, int x, int y){
 
 void AsteroidObject::update(){
     
-    ypos=ypos+10;
+    ypos=ypos+5;
     
     srcRect.h = 570;
     srcRect.w = 570;
@@ -27,8 +27,10 @@ void AsteroidObject::update(){
 }
 
 int AsteroidObject::xval(){
-    int xx = destRect.x;
-    return xx;
+    return xpos;
+}
+int AsteroidObject::yval(){
+    return ypos;
 }
 
 void AsteroidObject::render(){

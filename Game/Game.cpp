@@ -86,7 +86,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     int h = 0;
     for (int t = 0; t<1000; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-100;
+        h=h-50;
     }
     
     
@@ -189,17 +189,22 @@ void Game::render(){
 }
 
 void Game::clean(){
-    
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
     std::cout<<"Game Cleaned..."<<std::endl;
-    
-    
 }
 
 bool Game::checkCollision(){
-    bool collision = false;
-    int ship = AsteroidObject::xval();
+    int x = player->xval();
+    for (int y = 0; y<1000; y++){
+        int h = aster[y]->yval();
+        int g = aster[y]->xval();
+        //std::cout<<"y="<<h<<"x="<<g<<std::endl;
+        if((h == 550)&&(((g<=(x+80)&&(g>=x)))||((g<=x)&&(g>=(x-80))))){
+            std::cout<<"fuck you loser"<<std::endl;
+            collision = true;
+        }
+    }
     return collision;
 }

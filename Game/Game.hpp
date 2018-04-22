@@ -29,7 +29,7 @@ public:
 private:
     int cnt;
     bool isRunning;
-    bool collision;
+    bool collision = false;
     SDL_Window *window;
     
     
