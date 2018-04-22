@@ -8,7 +8,20 @@ int main(int argc, const char * argv[]) {
     int lives = 0;
     std::cout<<"How many games do you want to play?"<<std::endl;
     std::cin>>lives;
-    
+    while(std::cin.fail()) {
+        std::cout << "Error. Try again. Please enter int value 1-99" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(256,'\n');
+        std::cin >> lives;
+    } //floors decimals
+    if (lives>99){
+        std::cout<<"Max 99 lives. Lives is now equal to 99."<<std::endl;
+        lives=99;
+    }
+    if(lives<1){
+        std::cout<<"Min 1 life. Lives is now equal to 1."<<std::endl;
+        lives=1;
+    }
     
     
     
@@ -64,7 +77,7 @@ int main(int argc, const char * argv[]) {
         
         if ((alive == true)||(bigalive == true)){
             lives--;
-            std::cout<<"fuck you loser"<<std::endl;
+            std::cout<<"You died."<<std::endl;
             break;
         }
         

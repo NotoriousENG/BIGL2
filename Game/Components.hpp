@@ -1,5 +1,5 @@
 
-
+/*
 #include "ECS.hpp"
 
 class PositionComponent : public Component{
@@ -32,3 +32,4 @@ public:
     }
     
 };
+ */

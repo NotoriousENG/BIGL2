@@ -32,8 +32,8 @@ BigFuckingRock *rockstar[20];
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
-Manager manager;
-auto& newPlayer(manager.addEntity());
+//Manager manager;
+//auto& newPlayer(manager.addEntity());
 
 
 Game::Game(){
