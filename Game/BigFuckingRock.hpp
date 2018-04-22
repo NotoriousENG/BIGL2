@@ -27,6 +27,7 @@ public:
 private:
     int xpos;
     int ypos;
+    double sisi;
     
     SDL_Texture* objTexture;
     SDL_Rect srcRect, destRect;

@@ -8,11 +8,12 @@ BigFuckingRock::BigFuckingRock(const char* texturesheet, int x, int y){
     objTexture = TextureManager::LoadTexture(texturesheet);
     xpos = x;
     ypos = y;
+    
 }
 
 void BigFuckingRock::update(){
     
-    ypos=ypos+1;
+    ypos=ypos+3;
     
     srcRect.h = 570;
     srcRect.w = 570;
@@ -21,6 +22,8 @@ void BigFuckingRock::update(){
     
     destRect.x = xpos;
     destRect.y = ypos;
+    
+    
     destRect.w = srcRect.w;
     destRect.h = srcRect.h;
 }

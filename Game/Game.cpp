@@ -61,16 +61,14 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     }
     
     if(SDL_Init(SDL_INIT_EVERYTHING)==0){
-        std::cout<<"Subsystems Initialized..."<< std::endl;
+       
         
         window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
-        if(window){
-            std::cout<<"Window created..."<<std::endl;
-        }
+        
         renderer=SDL_CreateRenderer(window, -1, 0);
         if(renderer){
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-            std::cout<<"Renderer Created..."<<std::endl;
+            
         }
         
         isRunning=true;
@@ -96,6 +94,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
         h=h-50;
     }
+    val = 0;
+    
+    
+    
     
     
      
@@ -147,30 +149,55 @@ void Game::update(){
     
     
     ticks = SDL_GetTicks();
-    std::cout<<ticks<<std::endl;
     
     
-    if((ticks > 20000)&&()){
+    
+    if((ticks > 10000)&&(val<1)){
+    int location = player->xval();
+    rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 20000)&&(val<2)){
         int location = player->xval();
         rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
+        val++;
     }
+    if((ticks > 30000)&&(val<3)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 40000)&&(val<4)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 50000)&&(val<5)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+     
+    
+    
+    
+    
+    
     
     player->update();
     
-    /*enemy->update();
-    enemy2->update();
-    enemy3->update();
-    enemy4->update();
-    enemy5->update();
-    manager.update();
-    */
+    
     
     
     for (int t = 0; t<1000; t++){
         aster[t]->update();
     }
-    if(rockstar[bigrock]!=NULL){rockstar[bigrock]->update();}
+    if(rockstar[bigrock-1]!=NULL){rockstar[bigrock-1]->update();}
     
     
 }
@@ -194,7 +221,7 @@ void Game::render(){
     for (int t = 0; t<1000; t++){
         aster[t]->render();
     }
-    if(rockstar[bigrock]!=NULL){rockstar[bigrock]->render();}
+    if(rockstar[bigrock-1]!=NULL){rockstar[bigrock-1]->render();}
     
     //rockstar[bigrock]->render();
     

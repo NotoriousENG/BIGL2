@@ -35,6 +35,8 @@ private:
     int asteroidspastzero;
     SDL_Window *window;
     int ticks;
+    int val;
+    int location;
     
     
     
