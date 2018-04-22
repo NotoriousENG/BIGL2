@@ -14,8 +14,7 @@ public:
     int xval();
     int yval();
     
-    //void moveLeft();
-    //void moveRight();
+    
     
 private:
     int xpos;

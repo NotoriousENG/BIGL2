@@ -35,11 +35,6 @@
 		B15BD7E1208C210700816B00 /* PlayerObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlayerObject.hpp; sourceTree = "<group>"; };
 		C50FE2EA208BAC2300816307 /* Map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
 		C50FE2EB208BAC2300816307 /* Map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
-		C50FE2EF208BD4D300816307 /* ECS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ECS.hpp; sourceTree = "<group>"; };
-		C50FE2F0208BD4ED00816307 /* Components.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Components.hpp; sourceTree = "<group>"; };
-		C53B7AF2208BE0FD00580E75 /* rocket1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket1.png; sourceTree = "<group>"; };
-		C53B7AF3208BE0FD00580E75 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
-		C53B7AF4208BE0FD00580E75 /* Sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky.png; sourceTree = "<group>"; };
 		C56C6835208CD889002CCA2B /* AsteroidObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AsteroidObject.cpp; sourceTree = "<group>"; };
 		C56C6836208CD889002CCA2B /* AsteroidObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AsteroidObject.hpp; sourceTree = "<group>"; };
 		C5A8E39E208A5B6300EE1869 /* Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Game; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +65,6 @@
 		C5A8E395208A5B6200EE1869 = {
 			isa = PBXGroup;
 			children = (
-				C5A8E3AE208A6F5C00EE1869 /* Assets */,
 				C5A8E3A0208A5B6300EE1869 /* Game */,
 				C5A8E39F208A5B6300EE1869 /* Products */,
 				C5A8E3A8208A5F6E00EE1869 /* Frameworks */,
@@ -97,8 +91,6 @@
 				C5CCE51B208AAAD200D2AC66 /* TextureManager.hpp */,
 				C50FE2EA208BAC2300816307 /* Map.cpp */,
 				C50FE2EB208BAC2300816307 /* Map.hpp */,
-				C50FE2EF208BD4D300816307 /* ECS.hpp */,
-				C50FE2F0208BD4ED00816307 /* Components.hpp */,
 				C56C6835208CD889002CCA2B /* AsteroidObject.cpp */,
 				C56C6836208CD889002CCA2B /* AsteroidObject.hpp */,
 				C5B92889208D12A5007AE136 /* BigFuckingRock.cpp */,
@@ -114,16 +106,6 @@
 				C5A8E45C208A827B00EE1869 /* SDL2.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C5A8E3AE208A6F5C00EE1869 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				C53B7AF3208BE0FD00580E75 /* rock.png */,
-				C53B7AF2208BE0FD00580E75 /* rocket1.png */,
-				C53B7AF4208BE0FD00580E75 /* Sky.png */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

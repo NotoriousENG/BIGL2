@@ -5,23 +5,18 @@
 #include "PlayerObject.hpp"
 #include "Map.hpp"
 
-#include "Components.hpp"
+
 #include "AsteroidObject.hpp"
 #include <vector>
 #include "BigFuckingRock.hpp"
-//#include "ECS.hpp"
+
 
 PlayerObject* player;
 
 
 
 
-/*AsteroidObject* enemy;
-AsteroidObject* enemy2;
-AsteroidObject* enemy3;
-AsteroidObject* enemy4;
-AsteroidObject* enemy5;
-*/
+
 
 
 
@@ -32,8 +27,7 @@ BigFuckingRock *rockstar[20];
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
-//Manager manager;
-//auto& newPlayer(manager.addEntity());
+
 
 
 Game::Game(){
@@ -80,13 +74,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     player = new PlayerObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",400,550);
     
-    /*
-    enemy = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",100,0);
-    enemy2 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",200,-10);
-    enemy3 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",300,-60);
-    enemy4 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",400,-100);
-    enemy5 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",500,-150);
-    */
+    
     
     
     int h = 0;
@@ -110,7 +98,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     map = new Map();
     
-    //newPlayer.addComponent<PositionComponent>();
+   
     
 }
 

@@ -13,7 +13,7 @@ public:
     Game();
     ~Game();
     
-    //int asters[1000];
+   
     
     void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
     void handleEvents();
@@ -27,7 +27,7 @@ public:
     bool checkCollision();
     bool checkBigCollision();
     
-    //void createBigrock();
+ 
     
 private:
     int cnt;

@@ -65,7 +65,7 @@ int main(int argc, const char * argv[]) {
         game->render();
         alive = game->checkCollision();
         bigalive = game->checkBigCollision();
-        //game->createBigrock();
+        
         
         
         

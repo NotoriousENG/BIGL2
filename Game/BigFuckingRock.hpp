@@ -1,10 +1,3 @@
-//
-//  BigFuckingRock.hpp
-//  Game
-//
-//  Created by Oliver Hodge on 4/22/18.
-//  Copyright © 2018 Oliver Hodge. All rights reserved.
-//
 
 #ifndef BigFuckingRock_hpp
 #define BigFuckingRock_hpp
