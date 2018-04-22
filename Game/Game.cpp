@@ -8,6 +8,7 @@
 #include "Components.hpp"
 #include "AsteroidObject.hpp"
 #include <vector>
+#include "BigFuckingRock.hpp"
 //#include "ECS.hpp"
 
 PlayerObject* player;
@@ -26,6 +27,7 @@ AsteroidObject* enemy5;
 
 AsteroidObject *aster[1000];
 
+BigFuckingRock *rock[20];
 
 Map* map;
 
@@ -88,6 +90,9 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
         h=h-50;
     }
+    
+    int r = 0;
+    for 
     
     
     
@@ -200,8 +205,7 @@ bool Game::checkCollision(){
     for (int y = 0; y<1000; y++){
         int h = aster[y]->yval();
         int g = aster[y]->xval();
-        //std::cout<<"y="<<h<<"x="<<g<<std::endl;
-        if((h == 550)&&(((g<=(x+80)&&(g>=x)))||((g<=x)&&(g>=(x-80))))){
+        if((h == 550)&&(((g<=(x+40)&&(g>=x)))||((g<=x)&&(g>=(x-40))))){
             std::cout<<"fuck you loser"<<std::endl;
             collision = true;
         }

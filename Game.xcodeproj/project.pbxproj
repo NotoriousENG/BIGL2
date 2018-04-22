@@ -13,6 +13,7 @@
 		C5A8E3A2208A5B6300EE1869 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E3A1208A5B6300EE1869 /* main.cpp */; };
 		C5A8E3AD208A610500EE1869 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5A8E3AB208A610500EE1869 /* Game.cpp */; };
 		C5A8E45D208A827B00EE1869 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A8E45C208A827B00EE1869 /* SDL2.framework */; };
+		C5B9288B208D12A5007AE136 /* BigFuckingRock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B92889208D12A5007AE136 /* BigFuckingRock.cpp */; };
 		C5CCE517208A9CA300D2AC66 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CCE516208A9CA300D2AC66 /* SDL2_image.framework */; };
 		C5CCE51C208AAAD200D2AC66 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5CCE51A208AAAD200D2AC66 /* TextureManager.cpp */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 		C5A8E3AB208A610500EE1869 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		C5A8E3AC208A610500EE1869 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		C5A8E45C208A827B00EE1869 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		C5B92889208D12A5007AE136 /* BigFuckingRock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BigFuckingRock.cpp; sourceTree = "<group>"; };
+		C5B9288A208D12A5007AE136 /* BigFuckingRock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BigFuckingRock.hpp; sourceTree = "<group>"; };
 		C5CCE516208A9CA300D2AC66 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		C5CCE51A208AAAD200D2AC66 /* TextureManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 		C5CCE51B208AAAD200D2AC66 /* TextureManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextureManager.hpp; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				C50FE2F0208BD4ED00816307 /* Components.hpp */,
 				C56C6835208CD889002CCA2B /* AsteroidObject.cpp */,
 				C56C6836208CD889002CCA2B /* AsteroidObject.hpp */,
+				C5B92889208D12A5007AE136 /* BigFuckingRock.cpp */,
+				C5B9288A208D12A5007AE136 /* BigFuckingRock.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			files = (
 				B15BD7E2208C210700816B00 /* PlayerObject.cpp in Sources */,
 				C50FE2EC208BAC2300816307 /* Map.cpp in Sources */,
+				C5B9288B208D12A5007AE136 /* BigFuckingRock.cpp in Sources */,
 				C56C6837208CD889002CCA2B /* AsteroidObject.cpp in Sources */,
 				C5A8E3A2208A5B6300EE1869 /* main.cpp in Sources */,
 				C5A8E3AD208A610500EE1869 /* Game.cpp in Sources */,
