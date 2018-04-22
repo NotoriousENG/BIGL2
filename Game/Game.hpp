@@ -13,6 +13,8 @@ public:
     Game();
     ~Game();
     
+    //int asters[1000];
+    
     void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
     void handleEvents();
     void update();
@@ -21,9 +23,13 @@ public:
     static SDL_Renderer *renderer;
     
     bool running(){return isRunning;}
+    
+    bool checkCollision();
+    
 private:
     int cnt;
     bool isRunning;
+    bool collision;
     SDL_Window *window;
     
     

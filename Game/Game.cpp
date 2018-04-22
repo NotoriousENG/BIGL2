@@ -6,14 +6,27 @@
 #include "Map.hpp"
 
 #include "Components.hpp"
+#include "AsteroidObject.hpp"
+#include <vector>
 //#include "ECS.hpp"
 
 PlayerObject* player;
-GameObject* enemy;
-GameObject* enemy2;
-GameObject* enemy3;
-GameObject* enemy4;
-GameObject* enemy5;
+
+
+
+
+/*AsteroidObject* enemy;
+AsteroidObject* enemy2;
+AsteroidObject* enemy3;
+AsteroidObject* enemy4;
+AsteroidObject* enemy5;
+*/
+
+
+
+AsteroidObject *aster[1000];
+
+
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -28,7 +41,11 @@ Game::~Game(){
     
 }
 
+
+
 void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen){
+    
+    
     
     int flags=0;
     if (fullscreen){
@@ -55,16 +72,37 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         isRunning=false;
     }
     
-    player = new PlayerObject("/Users/zachweisblatt/Desktop/rocket1.png",0,550);
-    enemy = new GameObject("/Users/zachweisblatt/Desktop/rock.png",300,0);
-    enemy2 = new GameObject("/Users/zachweisblatt/Desktop/rock.png",0,-10);
-    enemy3 = new GameObject("/Users/zachweisblatt/Desktop/rock.png",100,-60);
-    enemy4 = new GameObject("/Users/zachweisblatt/Desktop/rock.png",640,-100);
-    enemy5 = new GameObject("/Users/zachweisblatt/Desktop/rock.png",200,-150);
+    player = new PlayerObject("/Users/oliverhodge/Desktop/Game/Assets/rocket1.png",0,550);
+    
+    /*
+    enemy = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",100,0);
+    enemy2 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",200,-10);
+    enemy3 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",300,-60);
+    enemy4 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",400,-100);
+    enemy5 = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png",500,-150);
+    */
+    
+    
+    int h = 0;
+    for (int t = 0; t<1000; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-100;
+    }
+    
+    
+    
+  
+    
+    
+    
+    
+
+    
+    
 
     map = new Map();
     
-    newPlayer.addComponent<PositionComponent>();
+    //newPlayer.addComponent<PositionComponent>();
     
 }
 
@@ -92,29 +130,60 @@ void Game::handleEvents(){
     }
 }
 
+
+
 void Game::update(){
     
     player->update();
-    enemy->update();
+    
+    /*enemy->update();
     enemy2->update();
     enemy3->update();
     enemy4->update();
     enemy5->update();
     manager.update();
-    std::cout<<newPlayer.getComponent<PositionComponent>().x()<<","<<newPlayer.getComponent<PositionComponent>().y()<<std::endl;
+    */
     
+    
+    for (int t = 0; t<1000; t++){
+        aster[t]->update();
+    }
+    
+    
+    //std::cout<<newPlayer.getComponent<PositionComponent>().x()<<","<<newPlayer.getComponent<PositionComponent>().y()<<std::endl;
+    
+    
+   
+    
+    
+    
+    //counter++;
 }
+
+
 
 void Game::render(){
     
     SDL_RenderClear(renderer);
     map->drawMap();
     player->render();
+   
+    /*
     enemy->render();
     enemy2->render();
     enemy3->render();
     enemy4->render();
     enemy5->render();
+    */
+    
+    for (int t = 0; t<1000; t++){
+        aster[t]->render();
+    }
+    
+   
+  
+    
+    
     SDL_RenderPresent(renderer);
     
 }
@@ -127,4 +196,10 @@ void Game::clean(){
     std::cout<<"Game Cleaned..."<<std::endl;
     
     
+}
+
+bool Game::checkCollision(){
+    bool collision = false;
+    int ship = AsteroidObject::xval();
+    return collision;
 }
