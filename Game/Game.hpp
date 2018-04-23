@@ -27,6 +27,8 @@ public:
     bool checkCollision();
     bool checkBigCollision();
     
+    std::string getRandomSprite();
+    
  
     
 private:

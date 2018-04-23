@@ -13,7 +13,7 @@ BigFuckingRock::BigFuckingRock(const char* texturesheet, int x, int y){
 
 void BigFuckingRock::update(){
     
-    ypos=ypos+3;
+    ypos=ypos+5;
     
     srcRect.h = 570;
     srcRect.w = 570;

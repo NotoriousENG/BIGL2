@@ -41,6 +41,31 @@ int bigrock = 0;
 
 int asteroidspastzero=0;
 
+std::string Game::getRandomSprite(){
+    int spriteNum = 1 + rand() % 3;
+    
+    std::string path;
+    switch (spriteNum){
+        case 1:
+            path = "/Users/oliverhodge/Desktop/Game/Assets/rock2.png";
+            break;
+        case 2:
+            path = "/Users/oliverhodge/Desktop/Game/Assets/rock3.png";
+            break;
+        case 3:
+            path = "/Users/oliverhodge/Desktop/Game/Assets/rock4.png";
+            break;
+        case 4:
+            path = "/Users/oliverhodge/Desktop/Game/Assets/rock5.png";
+            break;
+        default:
+            path = "/Users/oliverhodge/Desktop/Game/Assets/rock.png";
+            break;
+    }
+    return path;
+    
+}
+
 
 
 
@@ -76,125 +101,131 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     
     
+
+    
+    
+    
+    
     
     int h = 0;
     for (int t = 0; t<50; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock2.png", rand() % 800, h);
         h=h-200;
     }
     
     
     for (int t = 50; t<100; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-180;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock3.png", rand() % 800, h);
+        h=h-130;
     }
     
     
     for (int t = 100; t<150; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-175;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock4.png", rand() % 800, h);
+        h=h-100;
     }
     
     
     for (int t = 150; t<200; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-160;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock5.png", rand() % 800, h);
+        h=h-90;
     }
     
     
     for (int t = 200; t<250; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-150;
+        h=h-80;
     }
     
    
     for (int t = 250; t<300; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-140;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock2.png", rand() % 800, h);
+        h=h-70;
     }
     
     
     for (int t = 300; t<350; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-125;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock3.png", rand() % 800, h);
+        h=h-60;
     }
     
     
     for (int t = 350; t<400; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-120;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock4.png", rand() % 800, h);
+        h=h-50;
     }
     
     
     for (int t = 400; t<450; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-110;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock5.png", rand() % 800, h);
+        h=h-40;
     }
     
    
     for (int t = 450; t<500; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-100;
+        h=h-30;
     }
     
     
     for (int t = 500; t<550; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-90;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock2.png", rand() % 800, h);
+        h=h-27;
     }
     
    
     for (int t = 550; t<600; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-95;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock3.png", rand() % 800, h);
+        h=h-25;
     }
     
     
     for (int t = 600; t<650; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-80;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock4.png", rand() % 800, h);
+        h=h-22;
     }
     
     
     for (int t = 650; t<700; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-70;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock5.png", rand() % 800, h);
+        h=h-20;
     }
     
    
     for (int t = 700; t<750; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-50;
+        h=h-19;
     }
     
    
     for (int t = 750; t<800; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-40;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock2.png", rand() % 800, h);
+        h=h-18;
     }
     
     
     for (int t = 800; t<850; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-30;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock3.png", rand() % 800, h);
+        h=h-17;
     }
     
    
     for (int t = 850; t<900; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-28;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock4.png", rand() % 800, h);
+        h=h-16;
     }
     
     
     for (int t = 900; t<950; t++){
-        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-25;
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock5.png", rand() % 800, h);
+        h=h-15;
     }
     
     
     for (int t = 950; t<1000; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
-        h=h-22;
+        h=h-14;
     }
     
     
@@ -265,7 +296,7 @@ void Game::update(){
     
     if((ticks > 20000)&&(val<1)){
     int location = player->xval();
-    rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
         bigrock++;
         val++;
     }
@@ -586,7 +617,7 @@ bool Game::checkCollision(){
         
         int h = aster[y]->yval();
         int g = aster[y]->xval();
-        if((h == 550)&&(((g<=(x+40)&&(g>=x)))||((g<=x)&&(g>=(x-40))))){
+        if((h == 550)&&(((g<=(x+45)&&(g>=x)))||((g<=x)&&(g>=(x-45))))){
             
             collision = true;
             
