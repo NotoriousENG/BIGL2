@@ -1,6 +1,33 @@
 #include "Game.hpp"
 #include "AsteroidObject.hpp"
 
+/*******************************************************************************************************************************************
+ *                                                      DODGER CLONE:                                                                      *
+ *                          A C++ Game made using SDL libraries in the style of the classic game Dodger                                    *
+ *******************************************************************************************************************************************
+ *                                                           By:                                                                           *
+ *                                                      Oliver Hodge                                                                       *
+ *                                                    Pilar Albar Diaz                                                                     *
+ *                                                     Zach Weisblatt                                                                      *
+ *                                                      Jack Brennan                                                                       *
+ *                                                    Michael O'Connell                                                                    *
+ *******************************************************************************************************************************************
+ *                                                     Libraries used:                                                                     *
+ *                                        SDL: https://www.libsdl.org/download-2.0.php                                                     *
+ *                                        SDL_image: https://www.libsdl.org/projects/SDL_image/                                            *
+ *                                        SDL_Texture: https://wiki.libsdl.org/SDL_Texture                                                 *
+ *******************************************************************************************************************************************
+ *                                                      Sources used:                                                                      *
+ *                                    LazyFoo (SDL Tutorial): http://lazyfoo.net/tutorials/SDL/index.php                                   *
+ *                      Let's Make A Game: https://www.youtube.com/watch?v=QQzAHcojEKg&list=PLhfAbcv9cehhkG7ZQK0nfIGJC_C-wSLrx             *
+ *                                              learncpp: http://www.learncpp.com/                                                         *
+ *******************************************************************************************************************************************
+ *                                                      How to Play:                                                                       *
+ *                                       Set the number of times you want to play                                                          *
+ *                             Control your rocket using the arrow keys (->) and (<-) or 'a' and 'd'                                       *
+ *                                      Avoid Falling Asteroids (Look out for surprises too!)                                              *
+ *******************************************************************************************************************************************/
+
 Game *game = nullptr;
 
 int main(int argc, const char * argv[]) {

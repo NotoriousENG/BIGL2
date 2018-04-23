@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Game/Game.cpp"
-            timestampString = "546130503.5221421"
+            timestampString = "546134604.72368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "582"
+            endingLineNumber = "582"
+            landmarkName = "Game::checkCollision()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

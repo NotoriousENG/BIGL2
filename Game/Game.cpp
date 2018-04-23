@@ -22,7 +22,7 @@ PlayerObject* player;
 
 AsteroidObject *aster[1000];
 
-BigFuckingRock *rockstar[20];
+BigFuckingRock *rockstar[40];
 
 Map* map;
 
@@ -78,10 +78,133 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     
     
     int h = 0;
-    for (int t = 0; t<1000; t++){
+    for (int t = 0; t<50; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-200;
+    }
+    
+    
+    for (int t = 50; t<100; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-180;
+    }
+    
+    
+    for (int t = 100; t<150; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-175;
+    }
+    
+    
+    for (int t = 150; t<200; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-160;
+    }
+    
+    
+    for (int t = 200; t<250; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-150;
+    }
+    
+   
+    for (int t = 250; t<300; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-140;
+    }
+    
+    
+    for (int t = 300; t<350; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-125;
+    }
+    
+    
+    for (int t = 350; t<400; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-120;
+    }
+    
+    
+    for (int t = 400; t<450; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-110;
+    }
+    
+   
+    for (int t = 450; t<500; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-100;
+    }
+    
+    
+    for (int t = 500; t<550; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-90;
+    }
+    
+   
+    for (int t = 550; t<600; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-95;
+    }
+    
+    
+    for (int t = 600; t<650; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-80;
+    }
+    
+    
+    for (int t = 650; t<700; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-70;
+    }
+    
+   
+    for (int t = 700; t<750; t++){
         aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
         h=h-50;
     }
+    
+   
+    for (int t = 750; t<800; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-40;
+    }
+    
+    
+    for (int t = 800; t<850; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-30;
+    }
+    
+   
+    for (int t = 850; t<900; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-28;
+    }
+    
+    
+    for (int t = 900; t<950; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-25;
+    }
+    
+    
+    for (int t = 950; t<1000; t++){
+        aster[t] = new AsteroidObject("/Users/oliverhodge/Desktop/Game/Assets/rock.png", rand() % 800, h);
+        h=h-22;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     val = 0;
     
     
@@ -170,6 +293,219 @@ void Game::update(){
         bigrock++;
         val++;
     }
+    if((ticks > 90000)&&(val<6)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 100000)&&(val<7)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 110000)&&(val<8)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 120000)&&(val<9)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 130000)&&(val<10)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 140000)&&(val<11)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 150000)&&(val<12)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 160000)&&(val<13)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 170000)&&(val<14)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 180000)&&(val<15)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 190000)&&(val<16)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }if((ticks > 200000)&&(val<17)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 210000)&&(val<18)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 211000)&&(val<19)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 212000)&&(val<20)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 214000)&&(val<21)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 215000)&&(val<22)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 216000)&&(val<23)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 217000)&&(val<24)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 218000)&&(val<25)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 219000)&&(val<26)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 220000)&&(val<27)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 221000)&&(val<28)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 222000)&&(val<29)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 223000)&&(val<30)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 224000)&&(val<31)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 225000)&&(val<32)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 226000)&&(val<33)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 227000)&&(val<34)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 228000)&&(val<35)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 229000)&&(val<36)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }if((ticks > 230000)&&(val<37)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 231000)&&(val<38)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 232000)&&(val<39)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    if((ticks > 233000)&&(val<40)){
+        int location = player->xval();
+        rockstar[bigrock] = new BigFuckingRock("/Users/oliverhodge/Desktop/Game/Assets/rock.png", location-200, -200);
+        bigrock++;
+        val++;
+    }
+    
+    
+    
+    
+    
     
     if(ticks>1000000){
         std::cout<<"Stop playing this game: "<<std::endl;
@@ -190,6 +526,7 @@ void Game::update(){
     for (int t = 0; t<1000; t++){
         aster[t]->update();
     }
+    
     if(rockstar[bigrock-1]!=NULL){rockstar[bigrock-1]->update();}
     
     
@@ -214,6 +551,8 @@ void Game::render(){
     for (int t = 0; t<1000; t++){
         aster[t]->render();
     }
+    
+    
     if(rockstar[bigrock-1]!=NULL){rockstar[bigrock-1]->render();}
     
     //rockstar[bigrock]->render();
@@ -229,32 +568,45 @@ void Game::render(){
 
 void Game::clean(){
     SDL_DestroyWindow(window);
+    
     SDL_DestroyRenderer(renderer);
+    
     SDL_Quit();
+    
     std::cout<<"Game Cleaned..."<<std::endl;
+    
 }
 
 
 
 bool Game::checkCollision(){
     int x = player->xval();
+    
     for (int y = 0; y<1000; y++){
+        
         int h = aster[y]->yval();
         int g = aster[y]->xval();
         if((h == 550)&&(((g<=(x+40)&&(g>=x)))||((g<=x)&&(g>=(x-40))))){
+            
             collision = true;
+            
         }
         
     }
+    
     return collision;
 }
 
 bool Game::checkBigCollision(){
+    
     int x = player->xval();
+    
     for (int y = 0; y<1000; y++){
+        
         int h = rockstar[bigrock-1]->yval();
         int g = rockstar[bigrock-1]->xval()+255;
         if((h==100)&&(((g<=(x+120)&&(g>=x)))||((g<=x)&&(g>=(x-120))))){
+            
             BigCollision = true;
         }
     }
