@@ -17,7 +17,10 @@ private:
     int xpos;
     int ypos;
     
+     //points SDL Texture to an object
     SDL_Texture* objTexture;
+    
+    //declares the SDL Rectangle
     SDL_Rect srcRect, destRect;
     
 };

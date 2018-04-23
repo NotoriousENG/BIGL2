@@ -6,7 +6,10 @@
 
 class AsteroidObject{
 public:
+    
+    //asteroid object parameters
     AsteroidObject(const char* texturesheet, int x, int y);
+    //asteroid object deconstructor
     ~AsteroidObject();
     
     void update();
@@ -20,7 +23,11 @@ private:
     int xpos;
     int ypos;
     
+    
+    //points SDL Texture to an object
     SDL_Texture* objTexture;
+    
+    //declares the SDL Rectangle
     SDL_Rect srcRect, destRect;
     
 };
